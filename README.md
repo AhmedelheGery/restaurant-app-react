@@ -1,4 +1,8 @@
-*Clone down this repository. You will need node and npm installed globally on your machine.*
+Restaurant App
+
+An application used to filter data form Json data, built with React, Redux, JavaScript, and CSS.
+
+**Clone down this repository. You will need node and npm installed globally on your machine.**
 
 Installation:
 
