@@ -1,0 +1,31 @@
+.card-wrapper {
+  padding: 15px;
+  border-radius: 14px;
+  -webkit-box-shadow: 0px 0px 16px 6px rgba(244,244,244,0.39);
+  -moz-box-shadow: 0px 0px 16px 6px rgba(244,244,244,0.39);
+  box-shadow: 0px 0px 16px 6px rgba(244,244,244,0.39);
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.card-wrapper .content {
+  display: flex;
+  align-items: center;
+}
+.card-wrapper .content .logo {
+  width: 15%;
+  margin-right: 25px;
+}
+.card-wrapper .content .logo img {
+  width: 100%;
+}
+.card-wrapper .content .info .title {
+    font-weight: bolder;
+}
+.card-wrapper .content .tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-wrapper .content .tag {
+    margin-right: 10px;
+    margin-bottom: 0;
+}

@@ -1,0 +1,23 @@
+/* ================ Main CSS ================ */
+.restaurants-list .card-link{
+     color: inherit; 
+    text-decoration: inherit
+}
+  /* Mobile */
+  @media (min-width: 425px) {
+  }
+  /* Tablet */
+  @media (min-width: 768px) {
+  }
+  /* Labtop */
+  @media (min-width: 1024px) {
+  }
+  /* Labtop L*/
+  @media (min-width: 1440px) {
+  }
+  /* Full HD */
+  @media (min-width: 2560px) {
+  }
+  /* Ultra HD */
+  @media (min-width: 3840px) {
+  }
