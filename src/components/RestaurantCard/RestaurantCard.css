@@ -9,7 +9,7 @@
 }
 .card-wrapper .content {
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 .card-wrapper .content .logo {
   width: 15%;

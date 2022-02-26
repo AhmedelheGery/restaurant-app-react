@@ -23,3 +23,13 @@
     pointer-events: none;
     color: #5D5D5D;
 }
+
+  /* Labtop */
+  @media (min-width: 1024px) {
+    .search-input .form-control {
+        padding-left: 3rem;
+    }  
+    .search-input .form-control-feedback {
+        left: 3%;
+    }
+}
