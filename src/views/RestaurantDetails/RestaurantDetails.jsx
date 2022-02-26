@@ -40,9 +40,12 @@ const RestaurantDetails = () => {
               <>
                 <h3>Items</h3>
                 <div className="items-list">
-                  {restaurantData.items.map((item,i) => {
+                  {restaurantData.items.map((item, i) => {
                     return (
-                      <div key={i} className="card text-white bg-dark mb-3 item">
+                      <div
+                        key={i}
+                        className="card text-white bg-dark mb-3 item"
+                      >
                         <div className="card-header">{item.name}</div>
                         <div className="card-body">
                           <h5 className="card-title">{item.price}</h5>
@@ -62,7 +65,7 @@ const RestaurantDetails = () => {
               <>
                 <h3>Branches</h3>
                 <div className="branches-list">
-                  {restaurantData.branches.map((branch,i) => {
+                  {restaurantData.branches.map((branch, i) => {
                     return <p key={i}>{branch.name}</p>;
                   })}
                 </div>
@@ -73,10 +76,10 @@ const RestaurantDetails = () => {
           </div>
         </div>
       ) : (
-        (<h2 className="text-center py-5">Press back to refresh data</h2>)
+        <h2 className="text-center py-5">Press back to refresh data</h2>
       )}
       <Link className="btn btn-outline-dark d-grid my-4" to="/">
-        Back to home
+        Back to restaurants list
       </Link>
     </div>
   );

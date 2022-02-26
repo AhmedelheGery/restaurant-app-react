@@ -27,7 +27,7 @@
   /* Labtop */
   @media (min-width: 1024px) {
     .search-input .form-control {
-        padding-left: 3rem;
+        padding-left: 4rem;
     }  
     .search-input .form-control-feedback {
         left: 3%;
