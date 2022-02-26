@@ -1,28 +1,48 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import RestaurantCard from "../../components/RestaurantCard/RestaurantCard";
+import SearchInput from "../../components/SearchInput/SearchInput";
 import { getRestaurants } from "../../redux/actions/restaurants";
 import "./Home.css";
+
 const Home = () => {
+
   useEffect(() => {
     fetchData();
   }, []);
 
+  const restaurantsStore = useSelector((state) => state.restaurantsReducer);
+
   const disptach = useDispatch();
+
   const fetchData = () => {
     disptach(getRestaurants());
   };
 
-  const restaurantsStore = useSelector((state) => state.restaurantsReducer);
-  console.log("restaurantsStore", restaurantsStore);
+  // search config
+  const [inputText, setInputText] = useState("");
+
+  let inputHandler = (e) => {
+    var lowerCase = e.target.value.toLowerCase();
+    setInputText(lowerCase);
+  };
+
+  const filteredRestaurants = restaurantsStore.restaurants.filter((el) => {
+    if (inputText === "") {
+      return el;
+    } else {
+      return el.name.toLowerCase().includes(inputText);
+    }
+  });
 
   return (
     <div className="container py-4">
+      <SearchInput onSearch={inputHandler} />
       <h2 className="title mb-4">Restaurants</h2>
       <div className="restaurants-list">
-        {restaurantsStore.restaurants.length &&
-          restaurantsStore.restaurants.map((restaurant, i) => {
+        {filteredRestaurants.length ? (
+          filteredRestaurants.map((restaurant, i) => {
             return (
               <Link
                 className="card-link"
@@ -32,7 +52,10 @@ const Home = () => {
                 <RestaurantCard restaurant={restaurant} />
               </Link>
             );
-          })}
+          })
+        ) : (
+          <p>No matching data</p>
+        )}
       </div>
     </div>
   );

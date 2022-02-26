@@ -1,0 +1,25 @@
+.search-input{
+    position: relative;
+    margin-bottom: 30px;
+}
+.search-input .form-control {
+    padding-left: 3rem;
+    border-radius: 20px;
+    background-color: #EFEFEF;
+    border: 0;
+    width: 70%;
+}
+
+.search-input .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    left: 5%;
+    top: 50%;
+    transform:translate(-50%,-50%) ;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    pointer-events: none;
+    color: #5D5D5D;
+}
